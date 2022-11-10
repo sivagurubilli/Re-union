@@ -1,0 +1,97 @@
+.navbarCont{
+    height: 100px;
+    width: 100%;
+    /*border: 1px solid red;*/
+    border-bottom: .5px solid ;
+    display: flex;
+    justify-content: space-around;
+}
+.navbarLeft{
+    width: 70%;
+    /*border: 1px solid green;*/
+    display: flex;
+
+}
+.navbarRight{
+    width: 30%;
+    /*border: 1px solid yellow;*/
+    margin-left:120px ;
+    display: flex;
+}
+.navimg{
+    width: 50px;
+    height: 40px;
+    margin: 30px 0 0 50px;
+}
+.estatery{
+   margin: 40px 0 0 10px;
+    color: #3F3B58;
+}
+.estatery1{
+    margin: 36px 0 0 10px;
+     color: #3F3B58;
+     width: 80PX;
+text-align: center;
+height: 20px;
+padding: 10px 0 10px 0;
+}
+
+ .estateryManage{
+    margin: 36px 0 0 10px;
+     color: #3F3B58;
+     width: 180PX;
+text-align: center;
+height: 20px;
+padding: 10px 0 10px 0;
+     
+ }
+ .estateryFavourite{
+    margin: 36px 0 0 10px;
+    color: #3F3B58;
+    width: 180PX;
+text-align: center;
+height: 20px;
+padding: 10px 0 10px 0;
+   
+ }
+ .estatery1:hover {
+    background-color: #E4E1F3;
+    color: blue;
+ }
+ .estateryFavourite:hover{
+    background-color: #E4E1F3;
+    color: blue;
+ }
+ .estateryManage:hover{
+    background-color: #E4E1F3;
+    color: blue;
+ }
+
+ .estaterylogin{
+    margin: 36px 0 0 10px;
+     color: #3F3B58;
+     width: 80PX;
+     border: 1px solid blue;
+text-align: center;
+height: 20px;
+margin-left: 30px;
+border-radius: 10px;
+padding: 10px 0 10px 0;
+}
+.estaterysignup{
+    margin: 36px 0 0 10px;
+     color: #3F3B58;
+     width: 80PX;
+     border: 1px solid blue;
+     background-color: blue;
+     color: white;
+text-align: center;
+height: 20px;
+border-radius: 10px;
+margin-left: 30px;
+padding: 10px 0 10px 0;
+}
+
+.Favourite{
+    text-decoration: none;
+}

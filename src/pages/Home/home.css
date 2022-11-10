@@ -1,0 +1,19 @@
+.homecontainer{
+     width: 80%;
+     border: 1px solid red;
+     margin: 50px 10%;
+     background-color: #F8F7FD;
+}
+.serchboxcontainer{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid green;
+ height: 80px;
+}
+
+.filterContainer{
+ background-color: #FFFFFF;
+ display: flex;
+ border: 1px solid green;
+ height: 100px;
+}
