@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar'
 
 const Favourite = () => {
+
   return (
-    <div>Favourite</div>
+    <div>
+
+      <Navbar/>
+      
+    </div>
   )
 }
 

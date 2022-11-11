@@ -1,19 +1,55 @@
 .homecontainer{
      width: 80%;
-     border: 1px solid red;
+     /* border: 1px solid red; */
      margin: 50px 10%;
      background-color: #F8F7FD;
 }
 .serchboxcontainer{
   display: flex;
   justify-content: space-between;
-  border: 1px solid green;
+  /* border: 1px solid green; */
  height: 80px;
 }
 
 .filterContainer{
  background-color: #FFFFFF;
  display: flex;
- border: 1px solid green;
+ /* border: 1px solid green; */
  height: 100px;
+}
+.location, .date ,.price,.property_type{
+    width: 20%;
+   
+    margin-top: 20px;
+}
+.filterContainer label{
+    margin-bottom: 20px;
+}
+.label{
+    margin: 20px  30px;
+    font-weight: 800;
+}
+
+.searchbut{
+    height: 50px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    margin: 30px 50px;
+    border: none;
+    border-radius: 10px;
+}
+.housedata{
+    display: grid;
+    margin-top: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 20px;
+}
+
+#city,#price,#house,#date{
+    height: 40px;
+    width: 150px;
+    margin-left: 20px;
+    border-radius: 10px;
 }
