@@ -27,9 +27,11 @@ Hi it is a house rental platform by using this app users can find all available 
 <hr/>
 
  ### Landing Page :
-  <div> <img src="https://github.com/sivagurubilli/fraazo-clone/blob/main/frontend/src/Images/Screenshot%20(242).png?raw=true"> </div>
+  <div> <img src="https://github.com/sivagurubilli/Re-union/blob/master/src/assets/Screenshot%20(250).png?raw=true"> </div>
 <hr/>
-
+ ### Add Property page :
+  <div> <img src="https://github.com/sivagurubilli/Re-union/blob/master/src/assets/Screenshot%20(252).png?raw=true"> </div>
+<hr/>
 
 ## Running it on your local machine
 
