@@ -17,7 +17,7 @@ const navigate=  useNavigate()
     dat.eamil= email,
     dat.password = password
 
-  var dat2 = JSON.parse(localStorage.getItem("userdata"))
+  var dat2 = JSON.parse(localStorage.getItem("user"))
   console.log(dat2)
     if(password==dat2.password){
       alert("login successfully")

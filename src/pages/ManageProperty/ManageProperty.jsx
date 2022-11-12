@@ -37,7 +37,7 @@ const [size,setsize] = useState("")
       "booked": false
     }
     await axios.post("https://reunion-back.herokuapp.com/houses",payload)
-    
+    alert(" successfully added Property details ")
     
 
   }
@@ -49,7 +49,7 @@ const [size,setsize] = useState("")
       <Navbar/>
       <div className="mainDiv">
         
-        <div className="formDiv">
+        <div className="formcont">
            <h2 style={{marginTop:"-5px",marginBottom:"5px"}}>Add your Property to Estatery</h2>
            <form onSubmit={handelAdd}>
               <div>

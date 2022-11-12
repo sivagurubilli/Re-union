@@ -10,13 +10,13 @@ import { addfav } from '../../redux/DataReducer/action';
 const HouseCard = ({el}) => {
   const  [toggleHeart, setToggleHeart] = useState(false)
 const dispatch = useDispatch()
-var FavArray1=[]
-FavArray1.push(JSON.parse(localStorage.getItem("Fav_App_Data")))||[];
+
 
 
  const  changeColor =((el) =>{
   if(toggleHeart==false){
   axios.post(`https://reunion-back.herokuapp.com/wishlist`,el)
+  localStorage.setItem("favdata",JSON.stringify(el))
     dispatch(addfav(el))
   setToggleHeart(!toggleHeart)
   }else if(toggleHeart==true){

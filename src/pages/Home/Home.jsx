@@ -10,9 +10,7 @@ import HouseCard from "../../components/HouseCard/HouseCard"
 import axios from "axios"
 
 const Home = () => {
-
-
-    const [data,setdata] = useState([])
+   const [data,setdata] = useState([])
     const [data1,setdata1] = useState([])
     const [city,setcity] = useState()
     const [price,setprice] = useState()
@@ -29,8 +27,11 @@ const Home = () => {
    
        useEffect(()=>{
         dispatch(getdata())
-       setdata(datad)
-       },[])
+        axios.get("http://localhost:3000/houses").then((res)=>{
+          setdata(res.data)
+        })
+       
+       },[dispatch,getdata])
     
 //filter by city
  const filterbycity=(e)=>{
@@ -60,6 +61,10 @@ const filterProperty=async()=>{
    cost:price,
     type_of_propety:housetype
   }))
+  axios.get(`https://reunion-back.herokuapp.com/houses?city=${city}&type_of_property=${type_of_property}`).then((res)=>{
+  setdata(res.data)
+})
+
 }
 
 // search by name component

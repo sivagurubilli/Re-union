@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom'
+
 import Navbar from '../../components/Navbar/Navbar'
 import "./signup.css"
 
@@ -19,8 +20,8 @@ const dispatch = useDispatch()
     dat.eamil= email,
     dat.username= username,
     dat.password = password
-
-    dispatch(dat)
+localStorage.setItem("user",JSON.stringify(dat))
+    
     alert("user register succsfully")
     navigate("/loginuser")
     
