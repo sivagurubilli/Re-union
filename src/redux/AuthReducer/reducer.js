@@ -1,35 +1,23 @@
 
 import * as types from "./actiontypes"
 
-
-var initstate ={
-   housedata:[],
-   filterddata:[],
-   isLoading:false,
-isError:false,
-}
-
-export const reducer =(state = initstate,action)=>{
-   const {type,payload}= action
-   console.log(payload,type)
-   switch(type){
-       case types.GETDATAREQ:
-           return {
-               ...state,
-               isLoading:true
-           }
-           case types.GETDATA:
-               return {
-                   ...state,
-                   hoteldata:payload
-               }
-               case types.GETDTAER:
-                   return {
-                       ...state,
-                       isError:true
-                   }
-                  
-                   default:
-                       return state
-   }
-}
+const initial = {
+    loading: false,
+    error: false,
+    user: {},
+    token: "",
+    isLoggedIn: false,
+  };
+  
+  export const userReducer = (state = initial, { type, payload }) => {
+    switch (type) {
+      case types.SIGNINSUCC:
+        return{
+            ...state,
+ user:payload
+        }
+       
+      default:
+        return state;
+    }
+  };

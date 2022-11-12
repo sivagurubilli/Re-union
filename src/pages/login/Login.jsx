@@ -8,16 +8,13 @@ const Loginuser = () =>{
 
   const [email,setemail] = useState()
   const [password,setpassword]= useState()
-const [rpassword,setrpassword] = useState()
+
 
 const navigate=  useNavigate()
 
   const handlesubmit=()=>{
-   
-   
     var dat ={}
     dat.eamil= email,
-    
     dat.password = password
 
   var dat2 = JSON.parse(localStorage.getItem("userdata"))

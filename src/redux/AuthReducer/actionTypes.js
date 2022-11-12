@@ -1,3 +1,6 @@
 export const LOGINREQ= "LOGINREQ"
  export const LOGINSUCC = "LOGINSUCC"
  export const LOGINERR = "LOGINSUCC"
+ export const SIGNINREQ= "LOGINREQ"
+ export const SIGNINSUCC = "LOGINSUCC"
+ export const SIGNINERR = "LOGINSUCC"

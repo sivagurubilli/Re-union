@@ -2,12 +2,29 @@ import React from 'react'
 import "./Housecard.css"
 import { useState } from 'react';
 import {RiHeart3Fill} from 'react-icons/ri';
+import { useDispatch } from 'react-redux';
+import axios from "axios"
+import { addfav } from '../../redux/DataReducer/action';
+
+
 const HouseCard = ({el}) => {
   const  [toggleHeart, setToggleHeart] = useState(false)
+const dispatch = useDispatch()
+var FavArray1=[]
+FavArray1.push(JSON.parse(localStorage.getItem("Fav_App_Data")))||[];
 
 
- const  changeColor =(() =>{
+ const  changeColor =((el) =>{
+  if(toggleHeart==false){
+  axios.post(`https://reunion-back.herokuapp.com/wishlist`,el)
+    dispatch(addfav(el))
+  setToggleHeart(!toggleHeart)
+  }else if(toggleHeart==true){
+    axios.delete(`https://reunion-back.herokuapp.com/id=${el.id}`)
     setToggleHeart(!toggleHeart)
+    
+   
+  }
    })
 
 
@@ -20,9 +37,10 @@ const HouseCard = ({el}) => {
     <h3 className='cost'>${el.cost}/month</h3>
     <RiHeart3Fill className={
             toggleHeart ? 'heart_active' : 'heart'
-          } onClick={changeColor}/>
+          } onClick={()=>changeColor(el)}/>
   </div>
    <h3 className='name'>{el.name}</h3>
+   <h3 className='name'>{el.type_of_propety}</h3>
 <h4 className='address'>{el.address}</h4>
 
 <div className='bed'>

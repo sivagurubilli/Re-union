@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { Navigate, useNavigate } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
 import "./signup.css"
@@ -10,7 +11,7 @@ const Register = () =>{
   const [password,setpassword]= useState()
 
 const navigate = useNavigate()
-
+const dispatch = useDispatch()
 
   const handlesubmit=()=>{
 
@@ -19,13 +20,11 @@ const navigate = useNavigate()
     dat.username= username,
     dat.password = password
 
-  
-    // localStorage.setItem("userdata",JSON.stringify(dat))
-    // if(password==rpassword){
-    //   alert("register successfully")
-    //   navigate("/loginuser")
-    // }
+    dispatch(dat)
+    alert("user register succsfully")
+    navigate("/loginuser")
     
+
   }
 
 

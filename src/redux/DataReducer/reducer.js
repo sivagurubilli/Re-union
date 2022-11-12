@@ -4,7 +4,8 @@ import * as types from "./actiontypes"
 
 var initstate ={
    housedata:[],
-   filterddata:[],
+   filtdata:[],
+   favdata:[],
    isLoading:false,
 isError:false,
 }
@@ -23,13 +24,35 @@ export const reducer =(state = initstate,action)=>{
                    ...state,
                    hoteldata:payload
                }
-               case types.GETDTAER:
+         case types.GETDTAER:
                    return {
                        ...state,
                        isError:true
                    }
-                  
-                   default:
-                       return state
+        case types.GETFILTREQ:
+                    return {
+                        ...state,
+                        isError:false
+                    }
+        case types.GETFILTDATA:
+                        return {
+                            ...state,
+                            housedata:[],
+                            filtdata:payload
+                         
+                        }
+             case types.GETFILTERR:
+                            return {
+                                ...state,
+                                isError:true
+                            }
+                case types.FAVSUCC:
+                            return{
+                        ...state,
+                        favdata:payload
+                            }
+                 
+        default:
+       return state
    }
 }

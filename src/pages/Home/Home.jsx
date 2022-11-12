@@ -4,7 +4,7 @@ import "./home.css"
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { getdata } from '../../redux/DataReducer/action'
-// import { getfilterdata } from '../../redux/DataReducer/action'
+import { getdata1} from '../../redux/DataReducer/action'
 import {useDispatch,useSelector} from "react-redux"
 import HouseCard from "../../components/HouseCard/HouseCard"
 import axios from "axios"
@@ -19,44 +19,64 @@ const Home = () => {
     const [housetype,sethousetype] = useState()
      const [payload,setpayload]= useState()
         const dispatch= useDispatch()
-       var  datad= useSelector((store)=>store.datareducer.hoteldata)
-       var filterddata = useSelector((store)=>store.datareducer.filterddata)
-    
-       // get the data when component mount
-    useEffect(()=>{
-       
-    dispatch(getdata())
- setdata(datad)
-    },[getdata,dispatch,setdata])
-  
 
+
+       var  datad= useSelector((store)=>store.datareducer.hoteldata)
+       var  filtdata= useSelector((store)=>store.datareducer.filtdata)
+      
+      
+       // get the data when component mount
+   
+       useEffect(()=>{
+        dispatch(getdata())
+       setdata(datad)
+       },[])
+    
+//filter by city
  const filterbycity=(e)=>{
 const {id,value} = e.target
-setcity(value)
+var housedata = datad.filter((el)=>el.city==value)
+setdata(housedata)
+
  }
 
+ //filter by price
  const filterbyprice=(e)=>{
   const {id,value} = e.target
-  setprice(value)
+  var housedata = datad.filter((el)=>el.cost<=value && el.cost>=value-500)
+  setdata(housedata)
   
 }
+//filter by house type
 const filterbyhousetype=(e)=>{
   const {id,value} = e.target
-  sethousetype(value)
+  var housedata = datad.filter((el)=>el.type_of_propety==value)
+setdata(housedata)
 }
 
-const filterProperty=()=>{
-  dispatch(getdata({
+const filterProperty=async()=>{
+ dispatch(getdata1({
     city:city,
    cost:price,
     type_of_propety:housetype
   }))
-  //filterbycost()
-
 }
 
-const filterbycost =()=>{
- console.log(filterddata,"datacost")
+// search by name component
+const searchByName =(el)=>{
+  console.log(el.target.value)
+var search = el.target.value
+  const filtereddata = datad.filter(
+  houses => {
+    return (
+      houses
+      .name
+      .toLowerCase()
+      .includes(search.toLowerCase())
+    );
+  }
+);
+setdata(filtereddata)
 }
 
   return (
@@ -65,8 +85,8 @@ const filterbycost =()=>{
         <div className='homecontainer'>
 <div className='serchboxcontainer'>
   <h2 >Search Properties to Rent</h2>
- <input  style ={{height:"50px",width:"40%",border:"1px solid", marginTop:"10px",borderRadius:"15px"}} placeholder='search with search bar'  />
-
+ <input  style ={{height:"50px",width:"40%",border:"1px solid", marginTop:"10px",borderRadius:"15px"}}
+  placeholder='search with search bar'  onChange={(el)=>searchByName(el)}/>
 </div>
 
 <div className='filterContainer'>
@@ -89,13 +109,10 @@ const filterbycost =()=>{
 <label className='label'>Date</label>
 <br />
 <input type="date" id="date" placeholder='Select Move-in-Date' />
-
-
 </div>
 <div className='price'>
 <label className='label'>Price</label>
 <br />
-
 <select id="price" name="price" onChange={filterbyprice}>
             <option value={null}>Price</option>
             <option value="2500">2000-2500</option>
@@ -112,7 +129,7 @@ const filterbycost =()=>{
             <option value='TownHouse'>TownHouse</option>
             <option value='Villa'>Villa</option>
             <option value='FarmHouse'>FarmHouse</option>
-            <option value="Cottge">Cottage</option>
+            <option value="Cottage">Cottage</option>
             <option value="Bunglaw">Bunglaw</option>
 
         </select>
@@ -123,7 +140,7 @@ const filterbycost =()=>{
 
 <div className='housedata'>
    
-   {datad?.length >0 && datad?.map((el)=>(
+   {data?.length >0 && data?.map((el)=>(
     <HouseCard el={el} />
    ))}
    </div>

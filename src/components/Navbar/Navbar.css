@@ -95,3 +95,16 @@ padding: 10px 0 10px 0;
 .Favourite{
     text-decoration: none;
 }
+
+.cart_item_count{
+    position :absolute;
+    top:40px;
+    left:710px;
+    font-size:12px;
+    font-weight:bold;
+    background:rgb(0, 162, 0);
+    color:white;
+    padding:2px 6px;
+    border-radius:50%;
+  
+  }

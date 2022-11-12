@@ -4,6 +4,7 @@ import { Route ,Routes} from 'react-router-dom'
 import Favourite from '../favourite/Favourite'
 import Home from '../Home/Home'
 import Loginuser from '../login/Login'
+import { ManageProperty } from '../ManageProperty/ManageProperty'
 import Signup from '../Signup/Signup'
 
 const Allroutes = () => {
@@ -14,7 +15,7 @@ const Allroutes = () => {
           <Route path ="/signup" element={<Signup/>}/>
           <Route path ="/login" element={<Loginuser />}/>
           <Route path ="/favourite" element={<Favourite/>}/>
-          
+          <Route path ="/addproperty" element ={<ManageProperty/>}/>
           </Routes>
     </div>
   )
