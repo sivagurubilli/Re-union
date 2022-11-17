@@ -43,7 +43,7 @@ You need latest version of NodeJS and Yarn installed, which is a dependency mana
 
 Once you have that, run following commands to get the project up and running:
 
-    git clone https://github.com/sivagurubilli/fraazo-clone.git
+    git clone https://github.com/sivagurubilli/Re-union.git
     cd Re-union
     npm  install
     npm run dev
