@@ -27,10 +27,10 @@ Hi it is a house rental platform by using this app users can find all available 
 <hr/>
 
  ### Landing Page :
-  <div> <img src="https://github.com/sivagurubilli/Re-union/blob/master/src/assets/Screenshot%20(250).png?raw=true"> </div>
+  <div> <img src="https://github.com/sivagurubilli/Re-union/blob/master/front-end/src/assets/Screenshot%20(250).png?raw=true"> </div>
 <hr/>
  ### Add Property page :
-  <div> <img src="https://github.com/sivagurubilli/Re-union/blob/master/src/assets/Screenshot%20(252).png?raw=true"> </div>
+  <div> <img src="https://github.com/sivagurubilli/Re-union/blob/master/front-end/src/assets/Screenshot%20(252).png?raw=true"> </div>
 <hr/>
 
 ## Running it on your local machine
@@ -43,7 +43,7 @@ You need latest version of NodeJS and Yarn installed, which is a dependency mana
 
 Once you have that, run following commands to get the project up and running:
 
-    git clone https://github.com/sivagurubilli/fraazo-clone.git
+    git clone https://github.com/sivagurubilli/Re-union.git
     cd Re-union
     npm  install
     npm run dev
