@@ -1,6 +1,7 @@
 
 import * as types from "./actiontypes"
 
+//initial state
 const initial = {
     loading: false,
     error: false,

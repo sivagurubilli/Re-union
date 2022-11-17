@@ -12,7 +12,7 @@ const HouseCard = ({el}) => {
 const dispatch = useDispatch()
 
 
-
+// change colour and add to wish lish in json  when click on heart symbol
  const  changeColor =((el) =>{
   if(toggleHeart==false){
   axios.post("https://reunion-back.herokuapp.com/wishlist",el)

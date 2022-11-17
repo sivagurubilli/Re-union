@@ -22,14 +22,14 @@ const dispatch =useDispatch()
   },[favoritedata,dispatch])
   
 
-
+// logout for user 
 const logout =()=>{
   localStorage.removeItem("user")
 }
 
 
 
-  console.log(favoritedata)
+
   return (
     <div className='navbarCont'>
 <div className='navbarLeft'>

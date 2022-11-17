@@ -13,7 +13,7 @@ const Home = () => {
    const [data,setdata] = useState([])
   const dispatch= useDispatch()
 
-
+//get the data from redux-store using useSellector
   var  datad= useSelector((store)=>store.datareducer.hoteldata)      
       
       
@@ -55,7 +55,7 @@ setdata(housedata)
 
 
 
-// search by name component
+// search by name in search component
 const searchByName =(el)=>{
   console.log(el.target.value)
 var search = el.target.value

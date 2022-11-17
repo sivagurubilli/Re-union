@@ -1,7 +1,7 @@
 
 import * as types from "./actiontypes"
 
-
+//initial state
 var initstate ={
    housedata:[],
    filtdata:[],
@@ -9,6 +9,7 @@ var initstate ={
    isLoading:false,
 isError:false,
 }
+
 
 export const reducer =(state = initstate,action)=>{
    const {type,payload}= action

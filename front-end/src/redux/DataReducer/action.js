@@ -1,6 +1,7 @@
 import axios from "axios"
 import * as types from "./actionTypes"
 
+//get data function 
 export const getdata =()=>(dispatch)=>{
  dispatch({type:types.GETDATAREQ})
  axios.get("https://reunion-back.herokuapp.com/houses").then((res)=>{

@@ -36,6 +36,7 @@ const [size,setsize] = useState("")
       "movin_date": date,
       "booked": false
     }
+    //add the property to houses data
     await axios.post("https://reunion-back.herokuapp.com/houses",payload)
     alert(" successfully added Property details ")
     
