@@ -49,7 +49,30 @@
 
 #city,#price,#house,#date{
     height: 40px;
-    width: 150px;
+    width: 80%;
     margin-left: 20px;
     border-radius: 10px;
 }
+
+
+@media screen and (max-width: 500px) {
+.housedata{
+    display: grid;
+    margin-top: 50px;
+    margin-left: 50px;
+    grid-template-columns: 1fr;
+   grid-gap: 20px;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+    .housedata{
+        display: grid;
+        margin-top: 50px;
+        margin-left: 50px;
+        grid-template-columns: 1fr 1fr ;
+       grid-gap: 20px;
+    }
+    
+    }

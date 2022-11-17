@@ -97,18 +97,7 @@ padding: 10px 0 10px 0;
     text-decoration: none;
 }
 
-.cart_item_count{
-    position :absolute;
-    top:30px;
-    left:850px;
-    font-size:12px;
-    font-weight:bold;
-    background:rgb(0, 162, 0);
-    color:white;
-    padding:10px 10px;
-    border-radius:50%;
-  
-  }
+
   .username{
     margin: 45px 0 0 0;
   }

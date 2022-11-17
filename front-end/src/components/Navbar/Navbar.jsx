@@ -8,11 +8,11 @@ import { useState } from 'react'
 
 
 const Navbar = () => {
+  
+  
   const [isauth,setisauth] = useState(false)
   const favoritedata = useSelector((store)=>store.datareducer.favdata)
-
-  var dat2 = JSON.parse(localStorage.getItem("user"))
-  
+var dat2 = JSON.parse(localStorage.getItem("user"))
   var favdata1 = JSON.parse(localStorage.getItem("favdata"))
 
 
@@ -21,9 +21,14 @@ const dispatch =useDispatch()
   dispatch(addfav())
   },[favoritedata,dispatch])
   
+
+
 const logout =()=>{
   localStorage.removeItem("user")
 }
+
+
+
   console.log(favoritedata)
   return (
     <div className='navbarCont'>

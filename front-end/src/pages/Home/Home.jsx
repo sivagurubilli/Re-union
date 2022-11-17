@@ -11,28 +11,14 @@ import axios from "axios"
 
 const Home = () => {
    const [data,setdata] = useState([])
-    const [city,setcity] = useState()
-    const [price,setprice] = useState()
-    const [date,setdate] = useState()
-  
-    const [housetype,sethousetype] = useState()
-     const [payload,setpayload]= useState()
-  
-
-        const dispatch= useDispatch()
+  const dispatch= useDispatch()
 
 
-       var  datad= useSelector((store)=>store.datareducer.hoteldata)
-
-                
-          
-
-
-
+  var  datad= useSelector((store)=>store.datareducer.hoteldata)      
+      
       
        // get the data when component mount
-   
-
+       
        useEffect(()=>{
     dispatch(getdata())
        },[getdata])

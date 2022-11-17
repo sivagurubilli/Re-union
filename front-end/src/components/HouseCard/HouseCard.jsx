@@ -15,15 +15,13 @@ const dispatch = useDispatch()
 
  const  changeColor =((el) =>{
   if(toggleHeart==false){
-  axios.post(`https://reunion-back.herokuapp.com/wishlist`,el)
+  axios.post("https://reunion-back.herokuapp.com/wishlist",el)
   localStorage.setItem("favdata",JSON.stringify(el))
     dispatch(addfav(el))
   setToggleHeart(!toggleHeart)
   }else if(toggleHeart==true){
     axios.delete(`https://reunion-back.herokuapp.com/id=${el.id}`)
-    setToggleHeart(!toggleHeart)
-    
-   
+    setToggleHeart(!toggleHeart) 
   }
    })
 
